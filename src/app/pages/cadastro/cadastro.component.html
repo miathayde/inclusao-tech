@@ -1,0 +1,69 @@
+<div class="container row">
+    <!-- <div class="row"> -->
+        <div class="lado-esquerdo col-8">
+            <div class="row">
+                <div class="col">
+                    <h1>Cadastro</h1>
+                </div>
+                <div class="col ">
+                    <p>Caso não queira mais realizar o cadastro, é só clicar em CANCELAR</p>
+                </div>
+            </div>
+            <div class="row form">
+                <div class="col">
+                    <div>
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome" [(ngModel)]="cadastro.nome">
+                    </div>
+                    <div class="mt-2">
+                        <label for="sobrenome" class="form-label">Sobrenome</label>
+                        <input type="text" class="form-control" id="sobrenome" [(ngModel)]="cadastro.sobrenome">
+                    </div>
+                    <div class="mt-2">
+                        <label for="cpf" class="form-label">CPF (Somente números)</label>
+                        <input type="text" class="form-control" id="cpf" maxlength="14" 
+                        placeholder="Ex.: 000.000.000-00" mask="000.000.000-00"
+                        [(ngModel)]="cadastro.cpf" >
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <label for="senha" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="senha" [(ngModel)]="cadastro.senha"
+                            [ngClass]="{'is-invalid': senhasIguais == 'diferentes', 'is-valid': senhasIguais == 'iguais'}">
+                                
+                        </div>
+                        <div class="col">
+                            <label for="repetirSenha" class="form-label">Digite a senha novamente</label>
+                            <input type="password" class="form-control" id="repetirSenha" 
+                            [ngClass]="{'is-invalid': senhasIguais == 'diferentes', 'is-valid': senhasIguais == 'iguais'}"
+                            [(ngModel)]="repetirSenha" (ngModelChange)="verificarSenha()">
+                            <div class="invalid-feedback">
+                                As senhas não conferem.
+                            </div>
+                            <div class="valid-feedback">
+                                As senhas estão compatíveis.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row botoes">
+                        <div class="col d-flex justify-content-end">
+                            <button type="button" class="btn btn-info cadastrar">Cadastrar</button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-info cancelar">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lado-direito col">
+            <div class="aviso">
+                <p>Não se preocupe, seus dados nunca serão compartilhados com terceiros</p>
+            </div>
+            <div class="imagens">
+                <img class="imagem-robo" src="assets/robot.png" alt="Logo">
+                <img class="imagem-logo" src="assets/logo1.png" alt="Logo">
+            </div>
+        </div>
+    <!-- </div> -->
+</div>
