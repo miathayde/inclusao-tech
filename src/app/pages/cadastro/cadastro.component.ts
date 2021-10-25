@@ -82,6 +82,10 @@ export class CadastroComponent implements OnInit {
       this.repetirSenha != "" && this.senhasIguais == "iguais" && this.cadastro.cpf.length == 11) {
         if(!validacao) {
           this.alertCPF = true;
+
+          setTimeout(() => {
+            this.alertCPF = false;
+          }, 6000);
         } else {
           console.log("CHUCHU BELEZA")
         }
