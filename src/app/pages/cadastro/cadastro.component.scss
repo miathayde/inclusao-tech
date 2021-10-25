@@ -45,8 +45,8 @@ body, html {
 
 .lado-esquerdo {
     background: #EAEAEA;
-    height: 89vh;
     width: 50vw;
+    height: 92vh;
 
     h1 {
         font-family: 'Indie Flower', cursive;
@@ -115,4 +115,23 @@ body, html {
             transition: all 0.5s;
         }
     }
+}
+
+.aviso {
+    .col {
+        color: #db0808;
+        font-size: 14px;
+    }
+}
+
+.alert {
+    margin-bottom: 0;
+    border-radius: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.vazio {
+    margin-top: .25rem;
+    height: .875em;
 }

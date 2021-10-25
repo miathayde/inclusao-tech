@@ -1,3 +1,9 @@
+<div id="liveAlertPlaceholder" *ngIf="alertCPF">
+    <div class="alert alert-danger alert-dismissible" role="alert">
+        <div>O CPF digitado é inválido! Por favor, verifique e digite novamente o CPF.</div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="fechar()"></button>
+    </div>
+</div>
 <div class="container row">
     <!-- <div class="row"> -->
         <div class="lado-esquerdo col-8">
@@ -43,11 +49,18 @@
                             <div class="valid-feedback">
                                 As senhas estão compatíveis.
                             </div>
+                            <div class="vazio" *ngIf="senhasIguais == 'vazio'"></div>
                         </div>
                     </div>
-                    <div class="row botoes">
+                    <div class="row aviso mt-2" *ngIf="mostrarAviso">
+                        <div class="col">{{ aviso }}</div>
+                    </div>
+                    <div class="row botoes mb-3">
                         <div class="col d-flex justify-content-end">
-                            <button type="button" class="btn btn-info cadastrar">Cadastrar</button>
+                            <button type="button" class="btn btn-info cadastrar"
+                              (click)="cadastrar()">
+                                Cadastrar
+                            </button>
                         </div>
                         <div class="col">
                             <button type="button" class="btn btn-info cancelar">Cancelar</button>
