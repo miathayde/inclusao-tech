@@ -3,9 +3,8 @@ body, html {
     width: 110vw;
 }
 
-.container {
+.principal {
     height: 100%;
-    margin-right: -20px;
     margin:0px !important;
     padding: 0px !important;
 }
@@ -45,7 +44,6 @@ body, html {
 
 .lado-esquerdo {
     background: #EAEAEA;
-    width: 50vw;
     height: 94vh;
 
     h1 {

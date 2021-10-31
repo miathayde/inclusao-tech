@@ -1,0 +1,99 @@
+.principal {
+    height: 100%;
+    width: 98%;
+    margin:0px !important;
+    padding: 0px !important;
+}
+
+.initial-screen {
+    .lado-esquerdo {
+        background: #EAEAEA;
+        height: 86vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 36rem;
+            height: auto;
+        }
+    }
+
+    .lado-direito {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .texto {
+            text-align: right;
+            font-family: 'Indie Flower', cursive;
+            color: #EAEAEA;
+            
+            h1 {
+                line-height: 3.5rem;
+            }
+        }
+
+        .botao {
+            margin-bottom: 5rem;
+            display: flex;
+            justify-content: end;
+
+            .btn {
+                text-decoration: none;
+                font-size: 2.5rem;
+                color: #EAEAEA;
+                font-family: 'Indie Flower', cursive;
+            }
+
+            .btn:hover {
+                color: #83ffe2;
+                transition: all 0.5s;
+            }
+        }
+    }
+}
+
+.second-screen {
+    display: flex;
+    flex-direction: column;
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        img {
+            height: 18rem;
+            width: auto;
+        }
+    }
+
+    .botoes {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .btn {
+            font-size: 36px;
+            line-height: 2;
+            width: 17.8rem;
+            margin-top: 3rem;
+            border-radius: 12px;
+            font-family: 'Indie Flower', cursive;
+            background: #70FEDC;
+            border: none;
+            color: #383838;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #f5f5f5;
+            transition: all 0.5s;
+        }
+
+        .entrar {
+            margin-right: 2.8rem;
+        }
+    }
+}

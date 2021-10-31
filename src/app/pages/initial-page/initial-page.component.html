@@ -1,8 +1,31 @@
-<div class="container">
+<div class="principal">
     <div class="initial-screen" *ngIf="initial">
-        oi
+        <div class="row">
+            <div class="col-6 lado-esquerdo">
+                <img src="../../../assets/image-initial-page.png" alt="Imagem">
+            </div>
+            <div class="col lado-direito">
+                <div class="texto mt-3">
+                    <h1>Uma plataforma gratuita de aprendizado sobre o uso de computadores.</h1>
+                </div>
+                <div class="botao">
+                    <button type="button" class="btn btn-link" (click)="initial = false;">Clique aqui</button>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="second-screen" *ngIf="!initial">
-
+        <div class="logo mt-3">
+            <img src="../../../assets/robot.png" alt="Robô">
+            <img src="../../../assets/logo1.png" alt="Logo">
+        </div>
+        <div class="botoes">
+            <div class="entrar">
+                <button type="button" class="btn btn-primary">Entrar</button>
+            </div>
+            <div class="inscricao">
+                <button type="button" class="btn btn-primary">Inscrever-se</button>
+            </div>
+        </div>
     </div>
 </div>
