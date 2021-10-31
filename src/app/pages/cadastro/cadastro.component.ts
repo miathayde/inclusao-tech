@@ -1,4 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Usuario } from '../models/usuario';
+import { UsuariosService } from '../usuarios.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -7,14 +9,16 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class CadastroComponent implements OnInit {
 
-  cadastro: CadastroModel = new CadastroModel();
+  cadastro: Usuario = new Usuario();
   repetirSenha: string;
   senhasIguais: string = "vazio";
   aviso: string = "";
   mostrarAviso: boolean = false;
   alertCPF: boolean = false;
 
-  constructor() {
+  constructor(
+    private service: UsuariosService
+  ) {
     
    }
 
@@ -82,45 +86,53 @@ export class CadastroComponent implements OnInit {
       this.repetirSenha != "" && this.senhasIguais == "iguais" && this.cadastro.cpf.length == 11) {
         if(!validacao) {
           this.alertCPF = true;
+          this.aviso = "";
 
           setTimeout(() => {
             this.alertCPF = false;
-          }, 6000);
+          }, 9000);
         } else {
           console.log("CHUCHU BELEZA")
+          this.submeterCadastro();
         }
       } else {
         this.mostrarAviso = true;
 
         if(this.cadastro.nome == "" && this.cadastro.sobrenome == "" && this.cadastro.cpf == "" && this.cadastro.senha == "" && 
         this.repetirSenha == "") {
-          this.aviso = "Para realizar o cadastro, todos os campos acima devem ser preenchidos.";
+          this.aviso = "* Para realizar o cadastro, todos os campos acima devem ser preenchidos.";
         } else if (this.cadastro.cpf == "" || this.cadastro.cpf.length < 11) {
-          this.aviso = "O campo de 'CPF' está incompleto ou não foi preenchido.";
+          this.aviso = "* O campo de 'CPF' está incompleto ou não foi preenchido.";
         } else if (this.cadastro.senha == "" || this.repetirSenha == "" || this.senhasIguais != "iguais") {
-          this.aviso = "O campo de 'Senha' ou de 'Digite a senha novamente' não foram preenchidos, ou não foram preenchidos igualmente.";
+          this.aviso = "* O campo de 'Senha' ou de 'Digite a senha novamente' não foram preenchidos, ou não foram preenchidos igualmente.";
         } else if (this.cadastro.nome == "" || this.cadastro.nome.length < 3) {
-          this.aviso = "O campo de 'Nome' está muito curto ou não foi preenchido.";
+          this.aviso = "* O campo de 'Nome' está muito curto ou não foi preenchido.";
         } else if (this.cadastro.sobrenome == "" || this.cadastro.sobrenome.length < 3) {
-          this.aviso = "O campo de 'Sobrenome' está muito curto ou não foi preenchido.";
+          this.aviso = "* O campo de 'Sobrenome' está muito curto ou não foi preenchido.";
         }
       }
+  }
+
+  submeterCadastro() {
+    this.cadastro.aula1 = false;
+    this.cadastro.aula2 = false;
+    this.cadastro.aula3 = false;
+    this.cadastro.aula4 = false;
+    this.cadastro.aula5 = false;
+    console.log(this.cadastro)
+
+    this.service.create(this.cadastro).subscribe(
+      success => {
+        console.log('sucesso');
+        this.cadastro = new Usuario();
+        this.senhasIguais = "";
+      },
+      error => console.error(error),
+      () => console.log('request completo')
+    );
   }
 
   fechar() {
     this.alertCPF = false;
   }
-}
-
-export class CadastroModel {
-  nome: string;
-  sobrenome: string;
-  cpf: string;
-  senha: string;
-
-  aula1: boolean = false;
-  aula2: boolean = false;
-  aula3: boolean = false;
-  aula4: boolean = false;
-  aula5: boolean = false;
 }

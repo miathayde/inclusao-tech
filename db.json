@@ -1,0 +1,76 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Usuario Teste",
+      "sobrenome": "da Silva",
+      "cpf": "529.982.247-25",
+      "senha": "teste123",
+      "aula1": false,
+      "aula2": false,
+      "aula3": false,
+      "aula4": false,
+      "aula5": false
+    },
+    {
+      "cpf": "11144477735",
+      "nome": "Ana Carolina",
+      "sobrenome": "Ferreira",
+      "senha": "12345",
+      "aula1": false,
+      "aula2": false,
+      "aula3": false,
+      "aula4": false,
+      "aula5": false,
+      "id": 2
+    },
+    {
+      "cpf": "18733341842",
+      "nome": "Marcelo",
+      "sobrenome": "Lopes",
+      "senha": "lopes",
+      "aula1": false,
+      "aula2": false,
+      "aula3": false,
+      "aula4": false,
+      "aula5": false,
+      "id": 3
+    },
+    {
+      "cpf": "38925498855",
+      "nome": "Daniele ",
+      "sobrenome": "Araujo da Silva",
+      "senha": "789",
+      "aula1": false,
+      "aula2": false,
+      "aula3": false,
+      "aula4": false,
+      "aula5": false,
+      "id": 4
+    },
+    {
+      "cpf": "03504003855",
+      "nome": "Jorge",
+      "sobrenome": "Barreto",
+      "senha": "neves",
+      "aula1": false,
+      "aula2": false,
+      "aula3": false,
+      "aula4": false,
+      "aula5": false,
+      "id": 5
+    },
+    {
+      "cpf": "11144477735",
+      "nome": "Michelle Teresa",
+      "sobrenome": "Estevinho de Athayde",
+      "senha": "123",
+      "aula1": false,
+      "aula2": false,
+      "aula3": false,
+      "aula4": false,
+      "aula5": false,
+      "id": 6
+    }
+  ]
+}
