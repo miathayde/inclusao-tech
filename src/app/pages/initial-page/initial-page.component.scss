@@ -14,7 +14,7 @@
         align-items: center;
 
         img {
-            width: 36rem;
+            width: 38rem;
             height: auto;
         }
     }
@@ -28,6 +28,8 @@
             text-align: right;
             font-family: 'Indie Flower', cursive;
             color: #EAEAEA;
+            margin-left: 1.8rem;
+            margin-top: 2rem;
             
             h1 {
                 line-height: 3.5rem;
@@ -62,6 +64,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        margin-top: 3rem;
 
         img {
             height: 18rem;

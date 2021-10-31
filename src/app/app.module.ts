@@ -9,6 +9,7 @@ import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { FormsModule } from '@angular/forms';
 import { IConfig, NgxMaskModule } from 'ngx-mask';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './pages/login/login.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -19,7 +20,8 @@ const maskConfig: Partial<IConfig> = {
     AppComponent,
     InitialPageComponent,
     HeaderComponent,
-    CadastroComponent
+    CadastroComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

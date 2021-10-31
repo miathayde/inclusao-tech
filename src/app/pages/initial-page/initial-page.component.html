@@ -1,7 +1,7 @@
 <div class="principal">
     <div class="initial-screen" *ngIf="initial">
         <div class="row">
-            <div class="col-6 lado-esquerdo">
+            <div class="col-7 lado-esquerdo">
                 <img src="../../../assets/image-initial-page.png" alt="Imagem">
             </div>
             <div class="col lado-direito">
@@ -15,7 +15,7 @@
         </div>
     </div>
     <div class="second-screen" *ngIf="!initial">
-        <div class="logo mt-3">
+        <div class="logo">
             <img src="../../../assets/robot.png" alt="Robô">
             <img src="../../../assets/logo1.png" alt="Logo">
         </div>
@@ -23,8 +23,8 @@
             <div class="entrar">
                 <button type="button" class="btn btn-primary">Entrar</button>
             </div>
-            <div class="inscricao">
-                <button type="button" class="btn btn-primary">Inscrever-se</button>
+            <div class="cadastro">
+                <button type="button" class="btn btn-primary" [routerLink]="['/cadastro']">Cadastrar-se</button>
             </div>
         </div>
     </div>
