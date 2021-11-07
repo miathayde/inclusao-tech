@@ -1,0 +1,126 @@
+body, html {
+    height: 100vh;
+    width: 110vw;
+}
+.principal {
+    height: 100%;
+    margin:0px !important;
+    padding: 0px !important;
+}
+
+.lado-esquerdo {
+    padding: 28px;
+
+    .ola {
+        font-size: 35px;
+        font-family: 'Indie Flower', cursive;
+        color: #70FEDC;
+    }
+
+    .info {
+        font-family: 'Indie Flower', cursive;
+        color: #EAEAEA;
+        font-size: 20px;
+        margin-top: -13px;
+    }
+
+    .dados {
+        margin-top: 2.2rem;
+
+        .nome {
+            margin-bottom: 1.9rem;
+        }
+
+        .label {
+            font-size: 19px;
+            color: #EAEAEA;
+            margin-bottom: 4px;
+        }
+
+        .dado {
+            font-size: 24px;
+            color: #70FEDC;
+            font-family: 'Indie Flower', cursive;
+        }
+    }
+
+    .botoes {
+        margin-top: 3.7rem;
+
+        .editar-dados {
+            display: flex;
+            justify-content: end;
+        }
+
+        .btn {
+            line-height: 2.5;
+            width: 12rem;
+            font-size: 23px;
+            font-family: 'Indie Flower', cursive;
+            font-weight: bold;
+            border: none;
+            border-radius: 12px;
+        }
+
+        .btn-dados {
+            background: #EAEAEA;
+        }
+
+        .btn-senha {
+            background: #72F9E0; 
+        }
+
+        .btn-dados:hover {
+            background: #303030;
+            color: #EAEAEA;
+            transition: all 0.5s;
+        }
+
+        .btn-senha:hover {
+            background: #303030;
+            color: #EAEAEA;
+            transition: all 0.5s;
+        }
+    }
+}
+
+.lado-direito {
+    background: #EAEAEA;
+    height: 88vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .andamento-cursos {
+        display: flex;
+        justify-content: space-between !important;
+        margin: 0 2rem;
+
+        justify-content: start;
+        font-family: 'Indie Flower', cursive;
+        padding: 17px;
+        color: #3C3C3C;
+        font-weight: bold;
+        font-size: 22px;
+    }
+
+    .btn {
+        font-size: 20px;
+        width: 8rem;
+        height: 2.6rem;
+        border-radius: 20px;
+        border: 0;
+        color: #3C3C3C;
+        font-weight: bold;
+        cursor: default;
+        pointer-events: none;
+    }
+
+    .concluido {
+        background: #11FF7E;
+    }
+
+    .pendente {
+        background: rgb(115, 146, 141);
+    }
+}

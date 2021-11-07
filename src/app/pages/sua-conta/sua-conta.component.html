@@ -1,1 +1,36 @@
-<p>sua-conta works!</p>
+<div class="principal row">
+    <div class="lado-esquerdo col">
+        <p class="ola">Olá, {{ usuario.nome }}</p>
+        <p class="info">Estes são os seus dados:</p>
+
+        <div class="dados">
+            <div class="nome">
+                <p class="label">Nome Completo:</p>
+                <p class="dado">{{ nomeCompleto }}</p>
+            </div>
+            <div class="cpf">
+                <p class="label">CPF:</p>
+                <p class="dado">{{ usuario.cpf }}</p>
+            </div>
+        </div>
+        <div class="row botoes">
+            <div class="col editar-dados">
+                <button type="button" class="btn btn-info btn-dados">Editar Dados</button>
+            </div>
+            <div class="col trocar-senha">
+                <button type="button" class="btn btn-info btn-senha">Trocar Senha</button>
+            </div>
+        </div>
+    </div>
+    <div class="lado-direito col-7">
+        <div class="andamento-cursos" *ngFor="let curso of cursos">
+            <p>{{ curso.nome }}</p>
+            <button type="button" class="btn btn-primary concluido" *ngIf="curso.status">
+                Concluído
+            </button>
+            <button type="button" class="btn btn-primary pendente" *ngIf="!curso.status">
+                Pendente
+            </button>
+        </div>
+    </div>
+</div>
