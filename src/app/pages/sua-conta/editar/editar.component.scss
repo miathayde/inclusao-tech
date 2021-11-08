@@ -9,25 +9,89 @@ body, html {
     padding: 0px !important;
 }
 
+.lado-esquerdo {
+    background: #EAEAEA;
+    height: 88.5vh;
+
+    h1 {
+        font-family: 'Indie Flower', cursive;
+        padding: 17px;
+        color: #3C3C3C;
+        font-weight: bold;
+    }
+
+    p {
+        font-family: 'Indie Flower', cursive;
+        padding: 12px;
+        font-size: 22px;
+        color: #3C3C3C;
+        font-weight: 600;
+        text-align: right;
+    }
+
+    .form {
+        margin-right: 35px;
+        margin-left: 35px;
+        margin-top: 3rem;
+
+        input {
+            border-radius: 15px;
+        }
+
+        input:focus{
+            outline: 1px solid #70FEDC;
+            // border-color: #70FEDC;
+            box-shadow: 0 0 1em #70FEDC;
+        }
+
+        .botoes {
+            margin-top: 40px;
+        }
+
+        .btn {
+            line-height: 2.5;
+            width: 12rem;
+            font-size: 23px;
+            font-family: 'Indie Flower', cursive;
+            font-weight: bold;
+            border-radius: 12px;
+            border: none;
+        }
+
+        .cancelar {
+            background: #ffffff;
+        }
+
+        .cancelar:hover {
+            background: #303030;
+            color: #EAEAEA;
+            transition: all 0.5s;
+        }
+
+        .editar {
+            background: #72F9E0;
+        }
+
+        .editar:hover {
+            background: #303030;
+            color: #EAEAEA;
+            transition: all 0.5s;
+        }
+    }
+}
+
 .lado-direito {
     position: inherit;
     flex: 1;
     display: flex;
     flex-direction: column;
 
-    p {
-        font-family: 'Indie Flower', cursive;
-        padding: 12px;
-        font-size: 22px;
-        color: #EAEAEA;
-    }
-
     .imagens {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: 2rem;
+        margin-top: 4rem;
         
         .imagem-robo {
             height: auto;
@@ -52,93 +116,4 @@ body, html {
         -webkit-transform:scale(1.2);
         transform:scale(1.2);
     }
-}
-
-.lado-esquerdo {
-    background: #EAEAEA;
-    height: 94vh;
-
-    h1 {
-        font-family: 'Indie Flower', cursive;
-        padding: 17px;
-        color: #3C3C3C;
-        font-weight: bold;
-    }
-
-    p {
-        font-family: 'Indie Flower', cursive;
-        padding: 12px;
-        font-size: 22px;
-        color: #3C3C3C;
-        font-weight: 600;
-        text-align: right;
-    }
-
-    .form {
-        margin-right: 35px;
-        margin-left: 35px;
-
-        input {
-            border-radius: 15px;
-        }
-
-        input:focus{
-            outline: 1px solid #70FEDC;
-            // border-color: #70FEDC;
-            box-shadow: 0 0 1em #70FEDC;
-        }
-
-        .botoes {
-            margin-top: 30px;
-        }
-
-        .btn {
-            line-height: 2.5;
-            width: 12rem;
-            font-size: 23px;
-            font-family: 'Indie Flower', cursive;
-            font-weight: bold;
-            border-radius: 12px;
-            border: none;
-        }
-
-        .cancelar {
-            background: #ffffff;
-        }
-
-        .cancelar:hover {
-            background: #303030;
-            color: #EAEAEA;
-            transition: all 0.5s;
-        }
-
-        .cadastrar {
-            background: #72F9E0;
-        }
-
-        .cadastrar:hover {
-            background: #303030;
-            color: #EAEAEA;
-            transition: all 0.5s;
-        }
-    }
-}
-
-.aviso {
-    .col {
-        color: #db0808;
-        font-size: 14px;
-    }
-}
-
-.alert {
-    margin-bottom: 0;
-    border-radius: 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-.vazio {
-    margin-top: .25rem;
-    height: .875em;
 }

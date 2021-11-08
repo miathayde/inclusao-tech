@@ -1,1 +1,100 @@
-<p>editar works!</p>
+<div class="principal row">
+    <div class="lado-esquerdo col-7">
+        <div class="row editar-dados" *ngIf="modo == 'dados'">
+            <div class="col">
+                <h1>Editar Dados</h1>
+            </div>
+            <div class="col">
+                <p>Caso não queira mais editar seus dados, é só clicar em CANCELAR</p>
+            </div>
+        </div>
+        <div class="row trocar-senha" *ngIf="modo == 'senha'">
+            <div class="col">
+                <h1>Trocar Senha</h1>
+            </div>
+            <div class="col">
+                <p>Caso não queira mais trocar sua senha, é só clicar em CANCELAR</p>
+            </div>
+        </div>
+
+        <div class="row form editar-dados" *ngIf="modo == 'dados'">
+            <div class="col">
+                <div>
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome">
+                </div>
+                <div class="mt-3">
+                    <label for="sobrenome" class="form-label">Sobrenome</label>
+                    <input type="text" class="form-control" id="sobrenome">
+                </div>
+                <div class="mt-3">
+                    <label for="cpf" class="form-label">CPF (Somente números)</label>
+                    <input type="text" class="form-control" id="cpf" maxlength="14" 
+                    mask="000.000.000-00">
+                </div>
+                <div class="row botoes">
+                    <div class="col d-flex justify-content-end">
+                        <button type="button" class="btn btn-info editar">
+                            Editar
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-info cancelar" [routerLink]="['/sua-conta']">
+                            Cancelar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row form trocar-senha" *ngIf="modo == 'senha'">
+            <div class="col">
+                <div class="row">
+                    <div class="col-6">
+                        <label for="senha" class="form-label">Senha atual:</label>
+                        <input type="password" class="form-control" id="senha-atual" [(ngModel)]="senhaAtual">
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col">
+                        <label for="senha" class="form-label">Nova senha:</label>
+                        <input type="password" class="form-control" id="nova-senha" [(ngModel)]="novaSenha"
+                        [ngClass]="{'is-invalid': senhasIguais == 'diferentes', 'is-valid': senhasIguais == 'iguais'}">
+                    </div>
+                    <div class="col">
+                        <label for="senha" class="form-label">Digite novamente a nova senha:</label>
+                        <input type="password" class="form-control" id="repetir-senha" 
+                        [(ngModel)]="repetirSenha" (ngModelChange)="verificarSenha()"
+                        [ngClass]="{'is-invalid': senhasIguais == 'diferentes', 'is-valid': senhasIguais == 'iguais'}">
+                        <div class="invalid-feedback">
+                            As senhas não conferem.
+                        </div>
+                        <div class="valid-feedback">
+                            As senhas estão compatíveis.
+                        </div>
+                        <div class="vazio" *ngIf="senhasIguais == 'vazio'"></div>
+                    </div>
+                </div>
+                <div class="row botoes mb-3">
+                    <div class="col d-flex justify-content-end">
+                        <button type="button" class="btn btn-info editar">
+                            Salvar
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-info cancelar" [routerLink]="['/sua-conta']">
+                            Cancelar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lado-direito col">
+        <div class="logo">
+            <div class="imagens">
+                <img class="imagem-robo" src="assets/robot.png" alt="Logo">
+                <img class="imagem-logo" src="assets/logo1.png" alt="Logo">
+            </div>
+        </div>
+    </div>
+</div>

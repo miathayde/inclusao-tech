@@ -114,4 +114,17 @@ body, html {
             width: 21rem;
         }
     }
+
+    img{
+        max-width: 100%;
+    }
+
+    .imagens img{
+        -webkit-transition: all 0.7s ease;
+        transition: all 0.7s ease;
+    }
+    .imagens img:hover {
+        -webkit-transform:scale(1.2);
+        transform:scale(1.2);
+    }
 }
