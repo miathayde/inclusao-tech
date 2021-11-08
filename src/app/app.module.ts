@@ -11,6 +11,7 @@ import { IConfig, NgxMaskModule } from 'ngx-mask';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './pages/login/login.component';
 import { SuaContaComponent } from './pages/sua-conta/sua-conta.component';
+import { EditarComponent } from './pages/sua-conta/editar/editar.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -23,7 +24,8 @@ const maskConfig: Partial<IConfig> = {
     HeaderComponent,
     CadastroComponent,
     LoginComponent,
-    SuaContaComponent
+    SuaContaComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,
