@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './pages/login/login.component';
 import { SuaContaComponent } from './pages/sua-conta/sua-conta.component';
 import { EditarComponent } from './pages/sua-conta/editar/editar.component';
+import { ListaCursosComponent } from './pages/lista-cursos/lista-cursos.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -25,7 +26,8 @@ const maskConfig: Partial<IConfig> = {
     CadastroComponent,
     LoginComponent,
     SuaContaComponent,
-    EditarComponent
+    EditarComponent,
+    ListaCursosComponent
   ],
   imports: [
     BrowserModule,
