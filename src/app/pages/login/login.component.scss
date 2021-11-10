@@ -33,8 +33,13 @@ body, html {
         margin-left: 6rem;
         margin-top: 3rem;
 
+        label {
+            font-family: 'Varela Round', sans-serif;
+        }
+
         input {
             border-radius: 15px;
+            font-family: 'Varela Round', sans-serif;
         }
 
         input:focus{
@@ -49,6 +54,7 @@ body, html {
             
             .btn {
                 color: #3C3C3C;
+                font-family: 'Varela Round', sans-serif;
             }
         }
 

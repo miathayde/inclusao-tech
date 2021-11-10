@@ -78,8 +78,13 @@ body, html {
         margin-right: 35px;
         margin-left: 35px;
 
+        label {
+            font-family: 'Varela Round', sans-serif;
+        }
+
         input {
             border-radius: 15px;
+            font-family: 'Varela Round', sans-serif;
         }
 
         input:focus{
