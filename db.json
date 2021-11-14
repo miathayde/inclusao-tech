@@ -1,4 +1,137 @@
 {
+  "cursos": [
+    {
+      "id": 1,
+      "nome": "Utilidades Básicas"
+    },
+    {
+      "id": 2,
+      "nome": "Barra de Tarefas"
+    },
+    {
+      "id": 3,
+      "nome": "Manipulando Arquivos"
+    },
+    {
+      "id": 4,
+      "nome": "Aplicações"
+    },
+    {
+      "id": 5,
+      "nome": "Utilizando a Internet"
+    }
+  ],
+
+  "questoesCursos": [
+    {
+      "id": 1,
+      "idCurso": 1,
+      "questoes": [
+          {
+            "questao1": {
+              "pergunta": "O mouse pode ser utilizado tanto do lado direito como do lado esquerdo (mão esquerda ou direita).",
+              "resposta": "Verdadeiro",
+              "questoes": [
+                "Verdadeiro", "Falso"
+              ]
+            },
+            "questao2": {
+              "pergunta": "O botão direito do mouse pode abrir um menu de opções.",
+              "resposta": "Verdadeiro",
+              "questoes": [
+                "Verdadeiro", "Falso"
+              ]
+            },
+            "questao3": {
+              "pergunta": "O que acontece se clicar duas vezes em um arquivo com o botão esquerdo do mouse?",
+              "resposta": "Você irá executar o arquivo.",
+              "questoes": [
+                "Você irá excluir o arquivo.", "Você irá copiar o arquivo.", "Você irá executar o arquivo.", "Você irá recortar o arquivo."
+              ]
+            },
+            "questao4": {
+              "pergunta": "Quando estiver utilizando o navegador na internet e utilizar o botão de rolagem do mouse junto com o botão CTRL, automaticamente a página irá:",
+              "resposta": "Dar zoom de acordo com a rolagem.",
+              "questoes": [
+                "Dar zoom de acordo com a rolagem.", "Irá salvar a página nos favoritos.", "Abrirá a página de configurações do navegador.", "Navegará para a página anterior."
+              ]
+            },
+            "questao5": {
+              "pergunta": "É possível criar uma pasta no computador utilizando apenas o mouse?",
+              "resposta": "Verdadeiro",
+              "questoes": [
+                "Verdadeiro", "Falso"
+              ]
+            },
+            "questao6": {
+              "pergunta": "Apenas com o teclado podemos utilizar o computador.",
+              "resposta": "Verdadeiro",
+              "questoes": [
+                "Verdadeiro", "Falso"
+              ]
+            },
+            "questao7": {
+              "pergunta": "O teclado possui diversos atalhos para facilitar facilitar o dia-a-dia do usuário.",
+              "resposta": "Verdadeiro",
+              "questoes": [
+                "Verdadeiro", "Falso"
+              ]
+            }
+          }
+      ]
+    },
+    {
+      "id": 2,
+      "idCurso": 2,
+      "questoes": [
+          {
+            "questao1": {
+              "pergunta": "Na barra de tarefas podemos adicionar  atalhos para os programas mais utilizados pelo usuário.",
+              "resposta": "Verdadeiro",
+              "questoes": [
+                "Verdadeiro", "Falso"
+              ]
+            },
+            "questao2": {
+              "pergunta": "Podemos criar uma nova pasta na barra de tarefas.",
+              "resposta": "Falso",
+              "questoes": [
+                "Verdadeiro", "Falso"
+              ]
+            },
+            "questao3": {
+              "pergunta": "No menu iniciar na barra de tarefas podemos encontrar todos os programas instalados no computador.",
+              "resposta": "Verdadeiro",
+              "questoes": [
+                "Verdadeiro", "Falso"
+              ]
+            },
+            "questao4": {
+              "pergunta": "Qual o nome dado ao ícone que encontramos todos os programas instalados no computador?",
+              "resposta": "Menu inicial.",
+              "questoes": [
+                "Menu de tarefas.", "Barra de tarefas.", "Menu inicial.", "Menu de arquivos."
+              ]
+            },
+            "questao5": {
+              "pergunta": "Os ícones que ficam escondidos na bandeja da barra de tarefas estão abertos em segundo plano, por isso ficam escondidos.",
+              "resposta": "Verdadeiro",
+              "questoes": [
+                "Verdadeiro", "Falso"
+              ]
+            },
+            "questao6": {
+              "pergunta": "Para desligar o computador é necessário:",
+              "resposta": "Abrir o menu iniciar, clicar no ícone de força e em seguida clicar em desligar.",
+              "questoes": [
+                "Abrir o menu iniciar, clicar no ícone de força e em seguida clicar em desligar.", "Puxar a tomada do computador.", "Pressionar o botão do computador até que ele desligue.", "Clicar na barra de tarefas com o botão direito e clicar em desligar."
+              ]
+            }
+          }
+      ]
+    }
+  ],
+
   "usuarios": [
     {
       "id": 1,
