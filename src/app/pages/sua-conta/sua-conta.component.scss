@@ -54,7 +54,7 @@ body, html {
 
         .editar-dados {
             display: flex;
-            justify-content: end;
+            justify-content: flex-end;
         }
 
         .btn {
@@ -101,7 +101,7 @@ body, html {
         justify-content: space-between !important;
         margin: 0 2rem;
 
-        justify-content: start;
+        justify-content: flex-start;
         font-family: 'Indie Flower', cursive;
         padding: 17px;
         color: #3C3C3C;

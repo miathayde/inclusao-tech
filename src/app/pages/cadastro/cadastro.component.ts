@@ -121,7 +121,7 @@ export class CadastroComponent implements OnInit {
     this.cadastro.aula5 = false;
     console.log(this.cadastro)
 
-    this.service.create(this.cadastro).subscribe(
+    this.service.criar(this.cadastro).subscribe(
       success => {
         console.log('sucesso');
         this.cadastro = new Usuario();
