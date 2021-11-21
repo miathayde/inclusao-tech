@@ -9,9 +9,17 @@
     </div>
       
     <div class="menu-buttons">
-      <button type="button" class="btn btn-link">Sobre nós</button>
-      <button type="button" class="btn btn-link" [routerLink]="['/lista-cursos']">Cursos</button>
-      <button type="button" class="btn btn-link" [routerLink]="['/sua-conta']">Sua conta</button>
+      <button type="button" class="btn btn-link">
+        Sobre nós
+      </button>
+      <button type="button" class="btn btn-link" [routerLink]="['/lista-cursos']"
+      *ngIf="mostrarSubmenu">
+        Cursos
+      </button>
+      <button type="button" class="btn btn-link" [routerLink]="['/sua-conta']"
+      *ngIf="mostrarSubmenu">
+        Sua conta
+      </button>
     </div>
   </div>
 </header>

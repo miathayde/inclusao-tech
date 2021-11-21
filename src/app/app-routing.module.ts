@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'sua-conta/:id', component: SuaContaComponent },
   { path: 'editar/:modo/:id', component: EditarComponent },
-  { path: 'lista-cursos', component: ListaCursosComponent },
+  { path: 'lista-cursos/:id', component: ListaCursosComponent },
   { path: 'curso/:id', component: CursoComponent }
 ];
 

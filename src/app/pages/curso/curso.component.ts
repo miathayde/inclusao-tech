@@ -26,7 +26,7 @@ export class CursoComponent implements OnInit {
   listarCurso(id) {
     this.service.listarQuestoesCursos(Number(id)).subscribe(
       result => {
-        console.log(result)
+        // console.log(result)
       }
     )
   }
