@@ -13,6 +13,7 @@ export class CadastroComponent implements OnInit {
   repetirSenha: string;
   senhasIguais: string = "vazio";
   aviso: string = "";
+  avisoCpf: string = "";
   mostrarAviso: boolean = false;
   alertCPF: boolean = false;
   id: any;
@@ -85,12 +86,19 @@ export class CadastroComponent implements OnInit {
 
   cadastrar() {
     const validacao = this.validarCPF(this.cadastro.cpf);
+    const cpfCadastrado = this.usuarios.find(x => x.cpf == this.cadastro.cpf);
     
     if(this.cadastro.nome != "" && this.cadastro.sobrenome != "" && this.cadastro.cpf != "" && this.cadastro.senha != "" && 
       this.repetirSenha != "" && this.senhasIguais == "iguais" && this.cadastro.cpf.length == 11) {
-        if(!validacao) {
+        if(!validacao || cpfCadastrado) {
           this.alertCPF = true;
           this.aviso = "";
+
+          if(!validacao) {
+            this.avisoCpf = "O CPF digitado é inválido! Por favor, verifique e digite novamente o CPF.";
+          } else if(cpfCadastrado) {
+            this.avisoCpf = "O CPF digitado já está cadastrado.";
+          }
 
           document.documentElement.scrollTop = 0;
 
@@ -104,7 +112,7 @@ export class CadastroComponent implements OnInit {
       } else {
         this.mostrarAviso = true;
 
-        if(this.cadastro.nome == "" && this.cadastro.sobrenome == "" && this.cadastro.cpf == "" && this.cadastro.senha == "" && 
+        if(this.cadastro.nome == "" || this.cadastro.sobrenome == "" || this.cadastro.cpf == "" || this.cadastro.senha == "" || 
         this.repetirSenha == "") {
           this.aviso = "* Para realizar o cadastro, todos os campos acima devem ser preenchidos.";
         } else if (this.cadastro.cpf == "" || this.cadastro.cpf.length < 11) {

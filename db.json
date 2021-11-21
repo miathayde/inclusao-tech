@@ -156,7 +156,7 @@
       "id": 1,
       "nome": "Usuario Teste",
       "sobrenome": "da Silva",
-      "cpf": "529.982.247-25",
+      "cpf": "52998224725",
       "senha": "teste123",
       "aula1": false,
       "aula2": false,
@@ -187,30 +187,6 @@
       "aula4": false,
       "aula5": false,
       "id": 3
-    },
-    {
-      "cpf": "21250962188",
-      "nome": "Michelle Teresa",
-      "sobrenome": "Estevinho de Athayde",
-      "senha": "1234",
-      "aula1": false,
-      "aula2": false,
-      "aula3": false,
-      "aula4": false,
-      "aula5": false,
-      "id": 4
-    },
-    {
-      "cpf": "21250962188",
-      "nome": "Michelle",
-      "sobrenome": "Estevinho de Athayde",
-      "senha": "123",
-      "aula1": false,
-      "aula2": false,
-      "aula3": false,
-      "aula4": false,
-      "aula5": false,
-      "id": 5
     }
   ]
 }

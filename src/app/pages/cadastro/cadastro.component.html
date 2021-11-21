@@ -1,6 +1,6 @@
 <div id="liveAlertPlaceholder" *ngIf="alertCPF">
     <div class="alert alert-danger alert-dismissible" role="alert">
-        <div>O CPF digitado é inválido! Por favor, verifique e digite novamente o CPF.</div>
+        <div>{{avisoCpf}}</div>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="fechar()"></button>
     </div>
 </div>
