@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { CursosService } from '../cursos.service';
 import { CursoAndamento } from '../models/curso-andamento';
 import { Usuario } from '../models/usuario';
+import { UsuariosService } from '../usuarios.service';
 
 @Component({
   selector: 'app-sua-conta',
@@ -14,19 +16,22 @@ export class SuaContaComponent implements OnInit {
   nomeCompleto: string;
   cursos: Array<CursoAndamento> = new Array<CursoAndamento>();
 
-  constructor(private service: CursosService) { }
+  constructor(
+    private cursosService: CursosService,
+    private usuarioService: UsuariosService,
+    private route: ActivatedRoute
+    ) { }
 
   ngOnInit(): void {
-    this.obterNomesCursos();
+    const paramId = this.route.snapshot.paramMap.get('id');
 
-    this.usuario.nome = "Daphne";
-    this.usuario.sobrenome = "de Athayde Garcia";
-    this.usuario.cpf="123.456.789-10";
-    this.nomeCompleto = this.usuario.nome + " " + this.usuario.sobrenome
+    this.obterUsuario(Number(paramId));
+
+    this.obterNomesCursos();
   }
 
   obterNomesCursos() {
-    this.service.listarNomeCursos().subscribe(
+    this.cursosService.listarNomeCursos().subscribe(
       result => {
         let cursos = [];
         cursos = cursos.concat(result);
@@ -38,5 +43,15 @@ export class SuaContaComponent implements OnInit {
     )
   }
 
+  obterUsuario(id: number) {
+    this.usuarioService.obterUsuario(id).subscribe(
+      result => {
+        this.usuario = result;
+        this.nomeCompleto = this.usuario.nome + " " + this.usuario.sobrenome;
+
+        this.usuario.cpf = this.usuario.cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+      }
+    );
+  }
 }
  

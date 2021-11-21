@@ -25,6 +25,10 @@ export class UsuariosService {
     atualizar(usuario: Usuario) {
         return this.http.put(`${this.API}/${usuario.id}`, usuario);
     }
+
+    obterUsuario(id: number) {
+        return this.http.get<Usuario>(`${this.API}/${id}`);
+    }
 }
 
 // json-server --watch db.json
