@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: '', component: InitialPageComponent },
   { path: 'cadastro', component: CadastroComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'sua-conta', component: SuaContaComponent },
+  { path: 'sua-conta/:id', component: SuaContaComponent },
   { path: 'editar/:modo/:id', component: EditarComponent },
   { path: 'lista-cursos', component: ListaCursosComponent },
   { path: 'curso/:id', component: CursoComponent }

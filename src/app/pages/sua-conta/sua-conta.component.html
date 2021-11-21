@@ -28,7 +28,7 @@
     </div>
     <div class="lado-direito col-7">
         <div class="andamento-cursos" *ngFor="let curso of cursos">
-            <p>{{ curso.nome }}</p>
+            <p>Curso {{curso.id}} - {{ curso.nome }}</p>
             <button type="button" class="btn btn-primary concluido" *ngIf="curso.status">
                 Concluído
             </button>

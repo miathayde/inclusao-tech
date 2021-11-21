@@ -15,6 +15,8 @@ export class CadastroComponent implements OnInit {
   aviso: string = "";
   mostrarAviso: boolean = false;
   alertCPF: boolean = false;
+  id: any;
+  usuarios: any;
 
   constructor(
     private service: UsuariosService
@@ -28,6 +30,8 @@ export class CadastroComponent implements OnInit {
     this.cadastro.sobrenome = "";
     this.cadastro.senha = "";
     this.repetirSenha = "";
+
+    this.obterUsuarios();
   }
 
   verificarSenha() {
@@ -88,12 +92,14 @@ export class CadastroComponent implements OnInit {
           this.alertCPF = true;
           this.aviso = "";
 
+          document.documentElement.scrollTop = 0;
+
           setTimeout(() => {
             this.alertCPF = false;
           }, 9000);
         } else {
-          console.log("CHUCHU BELEZA")
           this.submeterCadastro();
+          this.direcionarRota();
         }
       } else {
         this.mostrarAviso = true;
@@ -134,5 +140,24 @@ export class CadastroComponent implements OnInit {
 
   fechar() {
     this.alertCPF = false;
+  }
+
+  direcionarRota() {
+    this.id = Math.max(...this.usuarios.map(x => x.id));
+    this.id = Number(this.id) + 1;
+    console.log(this.id)
+
+    window.open(`http://localhost:4200/sua-conta/${this.id}`,'_self');
+  }
+
+  obterUsuarios() {
+    let usuarios = [];
+
+    this.service.listar().subscribe(
+      result => {
+        usuarios = usuarios.concat(result);
+        this.usuarios = usuarios;
+      }
+    );
   }
 }

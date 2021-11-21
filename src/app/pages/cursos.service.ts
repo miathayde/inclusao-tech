@@ -16,6 +16,10 @@ export class CursosService {
         return this.http.get(`${this.API}/cursos`);
     }
 
+    buscarNomeCurso(id: number) {
+        return this.http.get(`${this.API}/cursos/${id}`);
+    }
+
     listarQuestoesCursos(id: number) {
         return this.http.get(`${this.API}/questoesCursos/${id}`);
     }

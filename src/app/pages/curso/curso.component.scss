@@ -1,4 +1,22 @@
-::ng-deep app-curso {
-    background-color: #EAEAEA;
+.principal {
+    margin-top: 7rem;
+    margin-left: 2rem;
 }
 
+.titulo {
+    color: #72F9E0;
+    font-family: 'Indie Flower', cursive;
+}
+
+.questionario {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .questao {
+        width: 700px;
+        height: 400px;
+        background: #72F9E0;
+        border-radius: 20px;
+    }
+}
