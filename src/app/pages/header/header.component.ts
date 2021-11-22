@@ -13,11 +13,11 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    if(this.router.url == '/' || this.router.url == '/cadastro' || this.router.url == '/login') {
-      this.mostrarSubmenu = false;
-    } else {
-      this.mostrarSubmenu = true;
-    }
+    // if(this.router.url == '/' || this.router.url == '/cadastro' || this.router.url == '/login') {
+    //   this.mostrarSubmenu = false;
+    // } else {
+    //   this.mostrarSubmenu = true;
+    // }
   }
 
 }

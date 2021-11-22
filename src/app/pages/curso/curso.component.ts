@@ -12,8 +12,10 @@ export class CursoComponent implements OnInit {
   curso: any;
   idUsuario: any;
   questoesCurso: Array<any> = new Array<any>();
-  questaoSelecionada: number = 0;
+  numSelecionada: number = 0;
+  questaoSelecionada: any;
   mudarCor: boolean = false;
+  questoesRespondidas = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -26,6 +28,7 @@ export class CursoComponent implements OnInit {
 
     this.buscarNomeCurso(paramCurso);
     this.listarCurso(paramCurso);
+    this.escolherQuestao(0);
   }
 
   listarCurso(id) {
@@ -67,7 +70,7 @@ export class CursoComponent implements OnInit {
   }
 
   selecionarResposta(item, selecionada) {
-    console.log(selecionada)
+    console.log(item)
     if(selecionada.questoes.find(x => x.mudaCor == true)) {
       selecionada.questoes.forEach(i => {
         i.mudaCor = false;
@@ -78,6 +81,12 @@ export class CursoComponent implements OnInit {
 
     item.mudaCor == false ? document.getElementById(item.resposta).style.background = 'transparent' :
       document.getElementById(item.resposta).style.background = '#EDEDED';
+
+    this.questaoSelecionada = selecionada;
+  }
+
+  escolherQuestao(numQuestao) {
+    this.numSelecionada = numQuestao;
   }
 
   enviarResposta() {
