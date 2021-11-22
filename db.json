@@ -25,130 +25,128 @@
     {
       "id": 1,
       "idCurso": 1,
-      "questoes": [
+      "questoes": 
         {
           "questao1": {
             "pergunta": "O mouse pode ser utilizado tanto do lado direito como do lado esquerdo (mão esquerda ou direita).",
             "resposta": "Verdadeiro",
             "questoes": [
-              "Verdadeiro",
-              "Falso"
+              {"resposta": "Verdadeiro", "mudaCor": false},
+              {"resposta": "Falso", "mudaCor": false}
             ]
           },
           "questao2": {
             "pergunta": "O botão direito do mouse pode abrir um menu de opções.",
             "resposta": "Verdadeiro",
             "questoes": [
-              "Verdadeiro",
-              "Falso"
+              {"resposta": "Verdadeiro", "mudaCor": false},
+              {"resposta": "Falso", "mudaCor": false}
             ]
           },
           "questao3": {
             "pergunta": "O que acontece se clicar duas vezes em um arquivo com o botão esquerdo do mouse?",
             "resposta": "Você irá executar o arquivo.",
             "questoes": [
-              "Você irá excluir o arquivo.",
-              "Você irá copiar o arquivo.",
-              "Você irá executar o arquivo.",
-              "Você irá recortar o arquivo."
+              {"resposta": "Você irá excluir o arquivo.", "mudaCor": false},
+              {"resposta": "Você irá copiar o arquivo.", "mudaCor": false},
+              {"resposta": "Você irá executar o arquivo.", "mudaCor": false},
+              {"resposta": "Você irá recortar o arquivo.", "mudaCor": false}
             ]
           },
           "questao4": {
             "pergunta": "Quando estiver utilizando o navegador na internet e utilizar o botão de rolagem do mouse junto com o botão CTRL, automaticamente a página irá:",
             "resposta": "Dar zoom de acordo com a rolagem.",
             "questoes": [
-              "Dar zoom de acordo com a rolagem.",
-              "Irá salvar a página nos favoritos.",
-              "Abrirá a página de configurações do navegador.",
-              "Navegará para a página anterior."
+              {"resposta": "Dar zoom de acordo com a rolagem.", "mudaCor": false},
+              {"resposta": "Irá salvar a página nos favoritos.", "mudaCor": false},
+              {"resposta": "Abrirá a página de configurações do navegador.", "mudaCor": false},
+              {"resposta": "Navegará para a página anterior.", "mudaCor": false}
             ]
           },
           "questao5": {
             "pergunta": "É possível criar uma pasta no computador utilizando apenas o mouse?",
             "resposta": "Verdadeiro",
             "questoes": [
-              "Verdadeiro",
-              "Falso"
+              {"resposta":"Verdadeiro", "mudaCor": false},
+              {"resposta":"Falso", "mudaCor": false}
             ]
           },
           "questao6": {
             "pergunta": "Apenas com o teclado podemos utilizar o computador.",
             "resposta": "Verdadeiro",
             "questoes": [
-              "Verdadeiro",
-              "Falso"
+              {"resposta":"Verdadeiro", "mudaCor": false},
+              {"resposta":"Falso", "mudaCor": false}
             ]
           },
           "questao7": {
             "pergunta": "O teclado possui diversos atalhos para facilitar facilitar o dia-a-dia do usuário.",
             "resposta": "Verdadeiro",
             "questoes": [
-              "Verdadeiro",
-              "Falso"
+              {"resposta":"Verdadeiro", "mudaCor": false},
+              {"resposta":"Falso", "mudaCor": false}
             ]
           }
         }
-      ]
     },
     {
       "id": 2,
       "idCurso": 2,
-      "questoes": [
+      "questoes": 
         {
           "questao1": {
             "pergunta": "Na barra de tarefas podemos adicionar  atalhos para os programas mais utilizados pelo usuário.",
             "resposta": "Verdadeiro",
             "questoes": [
-              "Verdadeiro",
-              "Falso"
+              {"resposta":"Verdadeiro", "mudaCor": false},
+              {"resposta":"Falso", "mudaCor": false}
             ]
           },
           "questao2": {
             "pergunta": "Podemos criar uma nova pasta na barra de tarefas.",
             "resposta": "Falso",
             "questoes": [
-              "Verdadeiro",
-              "Falso"
+              {"resposta":"Verdadeiro", "mudaCor": false},
+              {"resposta":"Falso", "mudaCor": false}
             ]
           },
           "questao3": {
             "pergunta": "No menu iniciar na barra de tarefas podemos encontrar todos os programas instalados no computador.",
             "resposta": "Verdadeiro",
             "questoes": [
-              "Verdadeiro",
-              "Falso"
+              {"resposta":"Verdadeiro", "mudaCor": false},
+              {"resposta":"Falso", "mudaCor": false}
             ]
           },
           "questao4": {
             "pergunta": "Qual o nome dado ao ícone que encontramos todos os programas instalados no computador?",
             "resposta": "Menu inicial.",
             "questoes": [
-              "Menu de tarefas.",
-              "Barra de tarefas.",
-              "Menu inicial.",
-              "Menu de arquivos."
+              {"resposta":"Menu de tarefas.", "mudaCor": false},
+              {"resposta":"Barra de tarefas.", "mudaCor": false},
+              {"resposta":"Menu inicial.", "mudaCor": false},
+              {"resposta":"Menu de arquivos.", "mudaCor": false}
             ]
           },
           "questao5": {
             "pergunta": "Os ícones que ficam escondidos na bandeja da barra de tarefas estão abertos em segundo plano, por isso ficam escondidos.",
             "resposta": "Verdadeiro",
             "questoes": [
-              "Verdadeiro",
-              "Falso"
+              {"resposta":"Verdadeiro", "mudaCor": false},
+              {"resposta":"Falso", "mudaCor": false}
             ]
           },
           "questao6": {
             "pergunta": "Para desligar o computador é necessário:",
             "resposta": "Abrir o menu iniciar, clicar no ícone de força e em seguida clicar em desligar.",
             "questoes": [
-              "Abrir o menu iniciar, clicar no ícone de força e em seguida clicar em desligar.",
-              "Puxar a tomada do computador.",
-              "Pressionar o botão do computador até que ele desligue.",
-              "Clicar na barra de tarefas com o botão direito e clicar em desligar."
+              {"resposta": "Abrir o menu iniciar, clicar no ícone de força e em seguida clicar em desligar.", "mudaCor": false},
+              {"resposta": "Puxar a tomada do computador.", "mudaCor": false},
+              {"resposta": "Pressionar o botão do computador até que ele desligue.", "mudaCor": false},
+              {"resposta": "Clicar na barra de tarefas com o botão direito e clicar em desligar.", "mudaCor": false}
             ]
           }
         }
-      ]
     }
   ],
   "usuarios": [
@@ -158,22 +156,22 @@
       "sobrenome": "da Silva",
       "cpf": "52998224725",
       "senha": "teste123",
-      "aula1": false,
-      "aula2": false,
-      "aula3": false,
-      "aula4": false,
-      "aula5": false
+      "aula1": "Iniciado",
+      "aula2": "Não iniciado",
+      "aula3": "Não iniciado",
+      "aula4": "Não iniciado",
+      "aula5": "Não iniciado"
     },
     {
       "cpf": "11144477735",
       "nome": "Ana Carolina",
       "sobrenome": "Ferreira",
       "senha": "12345",
-      "aula1": false,
-      "aula2": false,
-      "aula3": false,
-      "aula4": false,
-      "aula5": false,
+      "aula1": "Iniciado",
+      "aula2": "Não iniciado",
+      "aula3": "Não iniciado",
+      "aula4": "Não iniciado",
+      "aula5": "Não iniciado",
       "id": 2
     },
     {
@@ -181,11 +179,11 @@
       "nome": "Marcelo",
       "sobrenome": "Lopes",
       "senha": "lopes",
-      "aula1": false,
-      "aula2": false,
-      "aula3": false,
-      "aula4": false,
-      "aula5": false,
+      "aula1": "Iniciado",
+      "aula2": "Não iniciado",
+      "aula3": "Não iniciado",
+      "aula4": "Não iniciado",
+      "aula5": "Não iniciado",
       "id": 3
     }
   ]

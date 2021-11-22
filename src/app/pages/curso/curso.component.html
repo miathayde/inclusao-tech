@@ -1,6 +1,7 @@
 <div class="principal">
-    <div class="titulo">
+    <div class="titulo mb-4">
         <h1>{{curso?.nome}}</h1>
+        <h4>Para selecionar uma resposta, clique em cima da opção escolhida.</h4>
     </div>
 
     <div class="video">
@@ -8,11 +9,33 @@
     </div>
 
     <div class="questionario">
+        <div class="numQuestoes">
+            <div *ngFor="let num of questoesCurso; let i = index">
+                <div *ngIf="questaoSelecionada >= i">
+                    <button type="button" class="btn btn-primary btn-sm">{{i + 1}}</button>
+                </div>
+                <div *ngIf="i > questaoSelecionada">
+                    <button type="button" class="btn btn-primary btn-sm" [disabled]="true">{{i + 1}}</button>
+                </div>
+            </div>
+        </div>
         <div>
-            <h5>Questão 1</h5>
+            <h5>Questão {{questaoSelecionada + 1}}</h5>
         </div>
         <div class="questao">
-
+            <p class="pergunta">{{questoesCurso[questaoSelecionada]?.pergunta}}</p>
+            <div class="opcoes" *ngFor="let item of questoesCurso[questaoSelecionada]?.questoes; let i = index">
+                <hr *ngIf="!i">
+                <div class="lista-opcoes" id="{{item.resposta}}" (click)="selecionarResposta(item, questoesCurso[questaoSelecionada])">
+                    <div class="opcao" style="min-height: 40px; display: flex; align-items: center;">
+                        <span>{{item.resposta}}</span>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="botao">
+                <a class="btn btn-primary" href="#" role="button" (click)="enviarResposta()">Enviar resposta</a>
+            </div>
         </div>
     </div>
 </div>

@@ -21,7 +21,7 @@ export class CursosService {
     }
 
     listarQuestoesCursos(id: number) {
-        return this.http.get(`${this.API}/questoesCursos/${id}`);
+        return this.http.get<any>(`${this.API}/questoesCursos/${id}`);
     }
 }
 

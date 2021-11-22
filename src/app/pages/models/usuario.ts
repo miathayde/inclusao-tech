@@ -5,9 +5,9 @@ export class Usuario {
     cpf: string;
     senha: string;
 
-    aula1: boolean;
-    aula2: boolean;
-    aula3: boolean;
-    aula4: boolean;
-    aula5: boolean;
+    aula1: string;
+    aula2: string;
+    aula3: string;
+    aula4: string;
+    aula5: string;
 }

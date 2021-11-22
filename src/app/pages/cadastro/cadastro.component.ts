@@ -128,11 +128,11 @@ export class CadastroComponent implements OnInit {
   }
 
   submeterCadastro() {
-    this.cadastro.aula1 = false;
-    this.cadastro.aula2 = false;
-    this.cadastro.aula3 = false;
-    this.cadastro.aula4 = false;
-    this.cadastro.aula5 = false;
+    this.cadastro.aula1 = "Iniciado";
+    this.cadastro.aula2 = "Não iniciado";
+    this.cadastro.aula3 = "Não iniciado";
+    this.cadastro.aula4 = "Não iniciado";
+    this.cadastro.aula5 = "Não iniciado";
     console.log(this.cadastro)
 
     this.service.criar(this.cadastro).subscribe(

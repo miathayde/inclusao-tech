@@ -1,11 +1,18 @@
 .principal {
     margin-top: 7rem;
     margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .titulo {
     color: #72F9E0;
     font-family: 'Indie Flower', cursive;
+    display: flex;
+    justify-content: space-between;
+
+    h4 {
+        color: #EAEAEA;
+    }
 }
 
 .questionario {
@@ -13,10 +20,83 @@
     align-items: center;
     flex-direction: column;
 
+    h5 {
+        color: #EAEAEA;
+        font-family: 'Varela Round', sans-serif;
+        cursor: default;
+    }
+
     .questao {
         width: 700px;
-        height: 400px;
+        min-height: 300px;
         background: #72F9E0;
         border-radius: 20px;
+    }
+
+    .numQuestoes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .btn {
+            background: #72F9E0;
+            color: #3C3C3C;
+            border: none;
+            margin-right: 15px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .lista-opcoes {
+        font-family: 'Varela Round', sans-serif;
+    }
+
+    hr {
+        margin: 0;
+    }
+
+    .opcoes {
+        cursor: pointer;
+    }
+
+    .opcoes:hover {
+        background: #fdfdfd7e;
+    }
+
+    .pergunta {
+        margin: 1rem;
+        font-weight: 600;
+        font-size: 18px;
+        font-family: 'Varela Round', sans-serif;
+        color: #3C3C3C;
+        cursor: default;
+    }
+
+    span {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    .botao {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 1.5rem;
+        margin-right: 1rem;
+
+        .btn {
+            background: #ffffff;
+            font-family: 'Varela Round', sans-serif;
+            border: none;
+            color: #303030;
+            line-height: 2;
+        }
+
+        .btn:hover {
+            background: #303030;
+            color: #EAEAEA;
+            transition: all 0.5s;
+        }
     }
 }
