@@ -9,6 +9,9 @@ import { CursosService } from '../cursos.service';
 })
 export class CursoComponent implements OnInit {
 
+  telaVideo: boolean = false;
+  idCurso: number;
+
   curso: any;
   idUsuario: any;
   questoesCurso: Array<any> = new Array<any>();
@@ -34,6 +37,7 @@ export class CursoComponent implements OnInit {
   listarCurso(id) {
     this.service.listarQuestoesCursos(Number(id)).subscribe(
       result => {
+        this.idCurso = result.id;
         let curso = result.questoes;
 
         if(curso.questao1) {

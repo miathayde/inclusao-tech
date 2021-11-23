@@ -2,18 +2,34 @@
     <div class="titulo mb-4">
         <div>
             <h1>{{curso?.nome}}</h1>
-            <h2>Exercícios</h2>
+            <h2 *ngIf="!telaVideo">Exercícios</h2>
+            <h2 *ngIf="telaVideo">Vídeo-aula</h2>
         </div>
         <div>
-            <h4>Para selecionar uma resposta, clique em cima da opção escolhida.</h4>
+            <h4 *ngIf="!telaVideo">Para selecionar uma resposta, clique em cima da opção escolhida.</h4>
+            <h4 *ngIf="telaVideo">Para assistir ao vídeo, é só clicar nele.</h4>
+            <h4>Se precisar pausar, também basta clicá-lo.</h4>
         </div>
     </div>
 
-    <div class="video">
-
+    <div class="video-aula row" *ngIf="telaVideo">
+        <div class="video col">
+            <app-video-curso [idCurso]="idCurso"></app-video-curso>
+        </div>
+        <div class="botao col">
+            <div class="aviso">
+                <p>Quando terminar de assistir ao vídeo, clique no botão abaixo.</p>
+            </div>
+            <div class="imagem">
+                <img src="assets/seta-tela-video.png" alt="seta">
+            </div>
+            <div class="proxima-etapa">
+                <button type="button" class="btn btn-info">Próxima etapa</button>
+            </div>
+        </div>
     </div>
 
-    <div class="questionario">
+    <div class="questionario" *ngIf="!telaVideo">
         <div class="numQuestoes">
             <div *ngFor="let questao of questoesCurso; let i = index">
                 <button type="button" class="btn btn-primary btn-sm" 
@@ -39,6 +55,9 @@
             <div class="botao">
                 <a class="btn btn-primary" role="button" (click)="enviarResposta()">Enviar resposta</a>
             </div>
+        </div>
+        <div class="proxima-etapa">
+            <button type="button" class="btn btn-info finalizar">Finalizar curso</button>
         </div>
     </div>
 </div>

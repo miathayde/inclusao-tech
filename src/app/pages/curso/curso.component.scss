@@ -9,6 +9,7 @@
     font-family: 'Indie Flower', cursive;
     display: flex;
     justify-content: space-between;
+    cursor: default;
 
     h4 {
         color: #EAEAEA;
@@ -16,6 +17,50 @@
 
     h2{
         color: #EAEAEA;
+    }
+}
+
+.video-aula {
+    display: flex;
+    flex-direction: row;
+
+    .video {
+        background: #72F9E0;
+        border-radius: 15px;
+        width: 824px;
+        min-height: 481px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .botao {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        p {
+            color: #EAEAEA;
+            font-family: 'Indie Flower', cursive;
+            cursor: default;
+            font-size: 19px;
+        }
+
+        img {
+            height: 300px;
+            width: auto;
+        }
+
+        button {
+            line-height: 2.5;
+            font-size: 25px;
+            min-width: 14rem;
+            background: #72F9E0;
+            border: none;
+            font-family: 'Varela Round', sans-serif;
+            border-radius: 12px;
+        }
     }
 }
 
@@ -103,5 +148,16 @@
             color: #EAEAEA;
             transition: all 0.5s;
         }
+    }
+
+    .finalizar {
+        margin-top: 25px;
+        line-height: 2;
+        font-size: 22px;
+        min-width: 12rem;
+        background: #72F9E0;
+        border: none;
+        font-family: 'Varela Round', sans-serif;
+        border-radius: 12px;
     }
 }

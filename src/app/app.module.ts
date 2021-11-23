@@ -14,6 +14,7 @@ import { SuaContaComponent } from './pages/sua-conta/sua-conta.component';
 import { EditarComponent } from './pages/sua-conta/editar/editar.component';
 import { ListaCursosComponent } from './pages/lista-cursos/lista-cursos.component';
 import { CursoComponent } from './pages/curso/curso.component';
+import { VideoCursoComponent } from './pages/curso/video-curso/video-curso.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -29,7 +30,8 @@ const maskConfig: Partial<IConfig> = {
     SuaContaComponent,
     EditarComponent,
     ListaCursosComponent,
-    CursoComponent
+    CursoComponent,
+    VideoCursoComponent
   ],
   imports: [
     BrowserModule,
