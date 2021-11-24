@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -10,14 +11,21 @@ export class HeaderComponent implements OnInit {
 
   mostrarSubmenu: boolean = true;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) { 
+    this.router.events.pipe(
+      filter((event: any) => event instanceof NavigationEnd)
+  )
+      .subscribe(event => {
+          if(event.url == '/' || event.url == '/cadastro' || event.url == '/login') {
+            this.mostrarSubmenu = false;
+          } else {
+            this.mostrarSubmenu = true;
+          }
+      });
+  }
 
   ngOnInit(): void {
-    // if(this.router.url == '/' || this.router.url == '/cadastro' || this.router.url == '/login') {
-    //   this.mostrarSubmenu = false;
-    // } else {
-    //   this.mostrarSubmenu = true;
-    // }
+    
   }
 
 }
