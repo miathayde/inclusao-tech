@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { CursosService } from '../cursos.service';
 
 @Component({
@@ -9,10 +10,14 @@ import { CursosService } from '../cursos.service';
 export class ListaCursosComponent implements OnInit {
 
   cursos: any;
+  idUsuario: any;
 
   constructor(
-    private service: CursosService
-  ) { }
+    private service: CursosService,
+    private route: ActivatedRoute
+  ) {
+    this.route.params.subscribe(params => this.idUsuario = params['id']);
+   }
 
   ngOnInit(): void {
     this.listarCursos();
@@ -26,7 +31,9 @@ export class ListaCursosComponent implements OnInit {
     )
   }
 
-  abrirCurso(id: number) {
-    window.open(`http://localhost:4200/curso/${id}`,'_self');
+  abrirCurso(id: number, nome: string) {
+    nome = nome.toLowerCase().replace(/ /g, "-");
+
+    window.open(`http://localhost:4200/curso/${this.idUsuario}/${nome}/${id}`,'_self');
   }
 }

@@ -17,7 +17,7 @@
                 <p>Nossos cursos de aprendizagem</p>
                 <div *ngFor="let curso of cursos">
                     <button type="button" class="btn btn-info sobre mb-3" 
-                    (click)="abrirCurso(curso.id)">
+                    (click)="abrirCurso(curso.id, curso.nome)">
                         Curso {{curso.id}} - {{curso.nome}}
                     </button>
                 </div>
