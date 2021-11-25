@@ -43,17 +43,37 @@
         </div>
         <div class="questao">
             <p class="pergunta">{{questoesCurso[numSelecionada]?.pergunta}}</p>
-            <div class="opcoes" *ngFor="let item of questoesCurso[numSelecionada]?.questoes; let i = index">
-                <hr *ngIf="!i">
-                <div class="lista-opcoes" id="{{item.resposta}}" (click)="selecionarResposta(item, questoesCurso[numSelecionada])">
-                    <div class="opcao" style="min-height: 40px; display: flex; align-items: center;">
-                        <span>{{item.resposta}}</span>
+            <div *ngIf="!mostrarResposta">
+                <div class="opcoes" *ngFor="let item of questoesCurso[numSelecionada]?.questoes; let i = index">
+                    <hr *ngIf="!i">
+                    <div class="lista-opcoes" id="{{item.resposta}}" (click)="selecionarResposta(item, questoesCurso[numSelecionada])">
+                        <div class="opcao" style="min-height: 40px; display: flex; align-items: center;">
+                            <span>{{item.resposta}}</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div *ngIf="mostrarResposta">
+                <hr>
+                <div class="resultado">
+                    <div class="imagem">
+                        <img src="assets/aprovado.png" alt="Afirmativo" *ngIf="respostaCorreta">
+                        <img src="assets/rejeitado.png" alt="Negativo" *ngIf="!respostaCorreta">
+                    </div>
+                    <div class="resposta-gabarito">
+                        <p class="resposta-correta" *ngIf="respostaCorreta">Resposta correta</p>
+                        <p class="resposta-incorreta" *ngIf="!respostaCorreta">Resposta incorreta</p>
+                        <p class="gabarito">Gabarito: {{ questoesCurso[numSelecionada]?.resposta }}</p>
                     </div>
                 </div>
-                <hr>
             </div>
             <div class="botao">
-                <a class="btn btn-primary" role="button" (click)="enviarResposta()">Enviar resposta</a>
+                <button class="btn btn-primary" role="button" *ngIf="!mostrarResposta"
+                [disabled]="!resposta"
+                (click)="enviarResposta(questoesCurso[numSelecionada])">
+                    Enviar resposta
+                </button>
             </div>
         </div>
         <div class="proxima-etapa">

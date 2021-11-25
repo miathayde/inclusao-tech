@@ -19,6 +19,9 @@ export class CursoComponent implements OnInit {
   questaoSelecionada: any;
   mudarCor: boolean = false;
   questoesRespondidas = [];
+  resposta: any = null;
+  respostaCorreta: boolean;
+  mostrarResposta: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -74,7 +77,6 @@ export class CursoComponent implements OnInit {
   }
 
   selecionarResposta(item, selecionada) {
-    console.log(item)
     if(selecionada.questoes.find(x => x.mudaCor == true)) {
       selecionada.questoes.forEach(i => {
         i.mudaCor = false;
@@ -87,13 +89,22 @@ export class CursoComponent implements OnInit {
       document.getElementById(item.resposta).style.background = '#EDEDED';
 
     this.questaoSelecionada = selecionada;
+    this.resposta = item;
   }
 
   escolherQuestao(numQuestao) {
+    this.mostrarResposta = false;
+    this.resposta = null;
     this.numSelecionada = numQuestao;
   }
 
-  enviarResposta() {
-
+  enviarResposta(selecionada) {
+    this.mostrarResposta = true;
+    
+    if(this.resposta.resposta == selecionada.resposta) {
+      this.respostaCorreta = true;
+    } else {
+      this.respostaCorreta = false;
+    }
   }
 }

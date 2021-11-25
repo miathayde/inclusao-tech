@@ -133,7 +133,6 @@ export class CadastroComponent implements OnInit {
     this.cadastro.aula3 = "Não iniciado";
     this.cadastro.aula4 = "Não iniciado";
     this.cadastro.aula5 = "Não iniciado";
-    console.log(this.cadastro)
 
     this.service.criar(this.cadastro).subscribe(
       success => {
@@ -153,7 +152,6 @@ export class CadastroComponent implements OnInit {
   direcionarRota() {
     this.id = Math.max(...this.usuarios.map(x => x.id));
     this.id = Number(this.id) + 1;
-    console.log(this.id)
 
     window.open(`http://localhost:4200/sua-conta/${this.id}`,'_self');
   }

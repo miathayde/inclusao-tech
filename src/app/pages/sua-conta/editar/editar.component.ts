@@ -22,7 +22,6 @@ export class EditarComponent implements OnInit {
   ngOnInit(): void {
     this.modo = this.route.snapshot.paramMap.get('modo');
     this.id = parseInt(this.route.snapshot.paramMap.get('id'));
-    console.log(this.id)
   }
 
   verificarSenha() {

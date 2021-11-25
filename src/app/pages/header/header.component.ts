@@ -20,7 +20,6 @@ export class HeaderComponent implements OnInit {
       filter((event: any) => event instanceof NavigationEnd)
   )
       .subscribe(event => {
-        console.log(event)
           if(event.url == '/' || event.url == '/cadastro' || event.url == '/login') {
             this.mostrarSubmenu = false;
           } else {
