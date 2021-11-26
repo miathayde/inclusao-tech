@@ -40,10 +40,6 @@ export class CursoComponent implements OnInit {
     this.listarCurso(Number(paramCurso));
     this.buscarUsuario(Number(idUsuario));
     this.escolherQuestao(0);
-
-    if(this.statusCurso == 'Em andamento') {
-      this.telaVideo = false;
-    }
   }
 
   listarCurso(id) {
@@ -51,7 +47,7 @@ export class CursoComponent implements OnInit {
       result => {
         this.idCurso = result.id;
         let curso = result.questoes;
-
+        
         if(curso.questao1) {
           this.questoesCurso.push(curso.questao1);
         }
@@ -89,12 +85,16 @@ export class CursoComponent implements OnInit {
     this.usuarioService.obterUsuario(idUsuario)
     .subscribe(result => {
       this.usuario = result;
-
+      
       if(this.idCurso == 1) this.statusCurso = this.usuario.aula1;
       else if(this.idCurso == 2) this.statusCurso = this.usuario.aula2;
       else if(this.idCurso == 3) this.statusCurso = this.usuario.aula3;
       else if(this.idCurso == 4) this.statusCurso = this.usuario.aula4;
       else if(this.idCurso == 5) this.statusCurso = this.usuario.aula5;
+
+      if(this.statusCurso == "Em andamento") {
+        this.telaVideo = false;
+      }
     });
   }
 

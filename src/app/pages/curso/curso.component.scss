@@ -61,6 +61,11 @@
             font-family: 'Varela Round', sans-serif;
             border-radius: 12px;
         }
+
+        button:hover {
+            background: #EAEAEA;
+            transition: all 0.5s;
+        }
     }
 }
 
@@ -164,6 +169,11 @@
         border: none;
         font-family: 'Varela Round', sans-serif;
         border-radius: 12px;
+    }
+
+    .finalizar:hover {
+        background: #EAEAEA;
+        transition: all 0.5s;
     }
 }
 
