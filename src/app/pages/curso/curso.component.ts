@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CursosService } from '../cursos.service';
+import { Usuario } from '../models/usuario';
+import { UsuariosService } from '../usuarios.service';
 
 @Component({
   selector: 'app-curso',
@@ -9,11 +11,12 @@ import { CursosService } from '../cursos.service';
 })
 export class CursoComponent implements OnInit {
 
-  telaVideo: boolean = false;
+  telaVideo: boolean = true;
   idCurso: number;
+  usuario: Usuario = new Usuario();
+  statusCurso: string;
 
   curso: any;
-  idUsuario: any;
   questoesCurso: Array<any> = new Array<any>();
   numSelecionada: number = 0;
   questaoSelecionada: any;
@@ -25,16 +28,22 @@ export class CursoComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private service: CursosService
+    private service: CursosService,
+    private usuarioService: UsuariosService
   ) { }
 
   ngOnInit(): void {
-    this.idUsuario = this.route.snapshot.paramMap.get('idUsuario');
+    const idUsuario = this.route.snapshot.paramMap.get('idUsuario');
     const paramCurso = this.route.snapshot.paramMap.get('idCurso');
 
-    this.buscarNomeCurso(paramCurso);
-    this.listarCurso(paramCurso);
+    this.buscarNomeCurso(Number(paramCurso));
+    this.listarCurso(Number(paramCurso));
+    this.buscarUsuario(Number(idUsuario));
     this.escolherQuestao(0);
+
+    if(this.statusCurso == 'Em andamento') {
+      this.telaVideo = false;
+    }
   }
 
   listarCurso(id) {
@@ -74,6 +83,36 @@ export class CursoComponent implements OnInit {
         this.curso = result;
       }
     );
+  }
+
+  buscarUsuario(idUsuario: number) {
+    this.usuarioService.obterUsuario(idUsuario)
+    .subscribe(result => {
+      this.usuario = result;
+
+      if(this.idCurso == 1) this.statusCurso = this.usuario.aula1;
+      else if(this.idCurso == 2) this.statusCurso = this.usuario.aula2;
+      else if(this.idCurso == 3) this.statusCurso = this.usuario.aula3;
+      else if(this.idCurso == 4) this.statusCurso = this.usuario.aula4;
+      else if(this.idCurso == 5) this.statusCurso = this.usuario.aula5;
+    });
+  }
+
+  proximaEtapa() {
+    this.alterarDadosCurso();
+
+    this.usuarioService.atualizar(this.usuario)
+    .subscribe(() => this.telaVideo = false);
+  }
+
+  alterarDadosCurso() {
+    var status = 'Em andamento';
+
+    if(this.idCurso == 1) this.usuario.aula1 = status;
+    else if(this.idCurso == 2) this.usuario.aula2 = status;
+    else if(this.idCurso == 3) this.usuario.aula3 = status;
+    else if(this.idCurso == 4) this.usuario.aula4 = status;
+    else if(this.idCurso == 5) this.usuario.aula5 = status;
   }
 
   selecionarResposta(item, selecionada) {
