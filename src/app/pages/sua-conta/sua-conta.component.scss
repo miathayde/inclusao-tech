@@ -89,12 +89,30 @@ body, html {
     }
 }
 
-.lado-direito {
-    background: #EAEAEA;
-    height: 88.8vh;
+.sair-conta {
+    margin-top: 28px;
     display: flex;
     justify-content: center;
+    font-family: 'Indie Flower', cursive;
+    
+    button {
+        color: #EAEAEA;
+        font-size: 40px;
+        text-decoration: none;
+    }
+
+    button:hover {
+        color: #72F9E0;
+        transition: all 0.5s;
+    }
+}
+
+.lado-direito {
+    background: #EAEAEA;
+    min-height: 88.8vh;
+    display: flex;
     flex-direction: column;
+    padding-top: 4rem;
 
     .andamento-cursos {
         display: flex;

@@ -24,7 +24,6 @@ export class ListaCursosComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.listarDadosUsuario();
     this.listarNomeCursos();
   }
 
@@ -32,6 +31,8 @@ export class ListaCursosComponent implements OnInit {
     this.cursosService.listarNomeCursos().subscribe(
       result => {
         this.cursos = result;
+
+        this.listarDadosUsuario();
       }
     )
   }
