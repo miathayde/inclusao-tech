@@ -111,7 +111,7 @@ body, html {
 
     .btn {
         font-size: 20px;
-        width: 8rem;
+        width: 10rem;
         height: 2.6rem;
         border-radius: 20px;
         border: 0;
@@ -127,5 +127,9 @@ body, html {
 
     .pendente {
         background: rgb(115, 146, 141);
+    }
+
+    .em-andamento {
+        background: #F2FF60;
     }
 }

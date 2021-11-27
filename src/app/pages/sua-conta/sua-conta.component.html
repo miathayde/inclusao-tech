@@ -29,11 +29,17 @@
     <div class="lado-direito col-7">
         <div class="andamento-cursos" *ngFor="let curso of cursos">
             <p>Curso {{curso.id}} - {{ curso.nome }}</p>
-            <button type="button" class="btn btn-primary concluido" *ngIf="curso.status">
+            <button type="button" class="btn btn-primary concluido" 
+            *ngIf="curso.status == 'Concluido'">
                 Concluído
             </button>
-            <button type="button" class="btn btn-primary pendente" *ngIf="!curso.status">
+            <button type="button" class="btn btn-primary pendente" 
+            *ngIf="curso.status == 'Iniciado' || curso.status == 'Não iniciado'">
                 Pendente
+            </button>
+            <button type="button" class="btn btn-primary em-andamento" 
+            *ngIf="curso.status == 'Em andamento'">
+                Em andamento
             </button>
         </div>
     </div>
