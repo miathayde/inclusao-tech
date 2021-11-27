@@ -27,20 +27,6 @@
       "idCurso": 1,
       "questoes": {
         "questao1": {
-          "pergunta": "O mouse pode ser utilizado tanto do lado direito como do lado esquerdo (mão esquerda ou direita).",
-          "resposta": "Verdadeiro",
-          "questoes": [
-            {
-              "resposta": "Verdadeiro",
-              "mudaCor": false
-            },
-            {
-              "resposta": "Falso",
-              "mudaCor": false
-            }
-          ]
-        },
-        "questao2": {
           "pergunta": "O botão direito do mouse pode abrir um menu de opções.",
           "resposta": "Verdadeiro",
           "questoes": [
@@ -54,7 +40,7 @@
             }
           ]
         },
-        "questao3": {
+        "questao2": {
           "pergunta": "O que acontece se clicar duas vezes em um arquivo com o botão esquerdo do mouse?",
           "resposta": "Você irá executar o arquivo.",
           "questoes": [
@@ -76,7 +62,7 @@
             }
           ]
         },
-        "questao4": {
+        "questao3": {
           "pergunta": "Quando estiver utilizando o navegador na internet e utilizar o botão de rolagem do mouse junto com o botão CTRL, automaticamente a página irá:",
           "resposta": "Dar zoom de acordo com a rolagem.",
           "questoes": [
@@ -98,21 +84,7 @@
             }
           ]
         },
-        "questao5": {
-          "pergunta": "É possível criar uma pasta no computador utilizando apenas o mouse?",
-          "resposta": "Verdadeiro",
-          "questoes": [
-            {
-              "resposta": "Verdadeiro",
-              "mudaCor": false
-            },
-            {
-              "resposta": "Falso",
-              "mudaCor": false
-            }
-          ]
-        },
-        "questao6": {
+        "questao4": {
           "pergunta": "Apenas com o teclado podemos utilizar o computador.",
           "resposta": "Verdadeiro",
           "questoes": [
@@ -126,7 +98,7 @@
             }
           ]
         },
-        "questao7": {
+        "questao5": {
           "pergunta": "O teclado possui diversos atalhos para facilitar facilitar o dia-a-dia do usuário.",
           "resposta": "Verdadeiro",
           "questoes": [
@@ -147,7 +119,7 @@
       "idCurso": 2,
       "questoes": {
         "questao1": {
-          "pergunta": "Na barra de tarefas podemos adicionar  atalhos para os programas mais utilizados pelo usuário.",
+          "pergunta": "Na barra de tarefas podemos adicionar atalhos para os programas mais utilizados pelo usuário.",
           "resposta": "Verdadeiro",
           "questoes": [
             {
@@ -211,20 +183,6 @@
           ]
         },
         "questao5": {
-          "pergunta": "Os ícones que ficam escondidos na bandeja da barra de tarefas estão abertos em segundo plano, por isso ficam escondidos.",
-          "resposta": "Verdadeiro",
-          "questoes": [
-            {
-              "resposta": "Verdadeiro",
-              "mudaCor": false
-            },
-            {
-              "resposta": "Falso",
-              "mudaCor": false
-            }
-          ]
-        },
-        "questao6": {
           "pergunta": "Para desligar o computador é necessário:",
           "resposta": "Abrir o menu iniciar, clicar no ícone de força e em seguida clicar em desligar.",
           "questoes": [
