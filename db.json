@@ -502,13 +502,13 @@
   "usuarios": [
     {
       "id": 1,
-      "nome": "Usuario Teste",
+      "nome": "Maria Eduarda",
       "sobrenome": "da Silva",
       "cpf": "52998224725",
-      "senha": "teste123",
+      "senha": "12345",
       "aula1": "Concluido",
       "aula2": "Concluido",
-      "aula3": "Iniciado",
+      "aula3": "Em andamento",
       "aula4": "Não iniciado",
       "aula5": "Não iniciado"
     },

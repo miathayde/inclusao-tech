@@ -21,25 +21,20 @@
             <div class="col">
                 <div>
                     <label for="nome" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="nome">
+                    <input type="text" class="form-control" id="nome" [(ngModel)]="usuario.nome">
                 </div>
                 <div class="mt-3">
                     <label for="sobrenome" class="form-label">Sobrenome</label>
-                    <input type="text" class="form-control" id="sobrenome">
-                </div>
-                <div class="mt-3">
-                    <label for="cpf" class="form-label">CPF (Somente números)</label>
-                    <input type="text" class="form-control" id="cpf" maxlength="14" 
-                    mask="000.000.000-00">
+                    <input type="text" class="form-control" id="sobrenome" [(ngModel)]="usuario.sobrenome">
                 </div>
                 <div class="row botoes">
                     <div class="col d-flex justify-content-end">
-                        <button type="button" class="btn btn-info editar">
-                            Editar
+                        <button type="button" class="btn btn-info editar" (click)="salvar()">
+                            Salvar
                         </button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-info cancelar" [routerLink]="['/sua-conta']">
+                        <button type="button" class="btn btn-info cancelar" (click)="cancelar()">
                             Cancelar
                         </button>
                     </div>
@@ -74,14 +69,17 @@
                         <div class="vazio" *ngIf="senhasIguais == 'vazio'"></div>
                     </div>
                 </div>
+                <div class="row aviso mt-2" *ngIf="mostrarAviso">
+                    <div class="col">{{ aviso }}</div>
+                </div>
                 <div class="row botoes mb-3">
                     <div class="col d-flex justify-content-end">
-                        <button type="button" class="btn btn-info editar">
+                        <button type="button" class="btn btn-info editar" (click)="salvarSenha()">
                             Salvar
                         </button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-info cancelar" [routerLink]="['/sua-conta']">
+                        <button type="button" class="btn btn-info cancelar" (click)="cancelar()">
                             Cancelar
                         </button>
                     </div>
