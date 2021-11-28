@@ -15,6 +15,7 @@ export class CursoComponent implements OnInit {
   idCurso: number;
   usuario: Usuario = new Usuario();
   statusCurso: string;
+  idUsuario: number;
 
   curso: any;
   questoesCurso: Array<any> = new Array<any>();
@@ -34,12 +35,12 @@ export class CursoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    const idUsuario = this.route.snapshot.paramMap.get('idUsuario');
-    const paramCurso = this.route.snapshot.paramMap.get('idCurso');
+    this.idUsuario = Number(this.route.snapshot.paramMap.get('idUsuario'));
+    const paramCurso = Number(this.route.snapshot.paramMap.get('idCurso'));
 
-    this.buscarNomeCurso(Number(paramCurso));
-    this.listarCurso(Number(paramCurso));
-    this.buscarUsuario(Number(idUsuario));
+    this.buscarNomeCurso(paramCurso);
+    this.listarCurso(paramCurso);
+    this.buscarUsuario(this.idUsuario);
     this.escolherQuestao(0);
   }
 
@@ -99,21 +100,42 @@ export class CursoComponent implements OnInit {
     });
   }
 
-  proximaEtapa() {
-    this.alterarDadosCurso();
-
+  salvar(item) {
     this.usuarioService.atualizar(this.usuario)
-    .subscribe(() => this.telaVideo = false);
+    .subscribe(() => {
+      if(item == 'proxima-etapa') {
+        this.telaVideo = false;
+      } else {
+        window.open(`http://localhost:4200/sua-conta/${this.idUsuario}`,'_self');
+      }
+    });
   }
 
-  alterarDadosCurso() {
-    var status = 'Em andamento';
+  alterarDadosCurso(item) {
+    let status;
+    item == 'proxima-etapa' ? status = 'Em andamento' : status = 'Concluido';
 
-    if(this.idCurso == 1) this.usuario.aula1 = status;
-    else if(this.idCurso == 2) this.usuario.aula2 = status;
-    else if(this.idCurso == 3) this.usuario.aula3 = status;
-    else if(this.idCurso == 4) this.usuario.aula4 = status;
-    else if(this.idCurso == 5) this.usuario.aula5 = status;
+    if(this.idCurso == 1) {
+      this.usuario.aula1 = status;
+      if(item == 'finalizar-curso') this.usuario.aula2 = 'Iniciado';
+
+    } else if(this.idCurso == 2) {
+      this.usuario.aula2 = status;
+      if(item == 'finalizar-curso') this.usuario.aula3 = 'Iniciado';
+
+    } else if(this.idCurso == 3) {
+      this.usuario.aula3 = status;
+      if(item == 'finalizar-curso') this.usuario.aula4 = 'Iniciado';
+
+    } else if(this.idCurso == 4) {
+      this.usuario.aula4 = status;
+      if(item == 'finalizar-curso') this.usuario.aula5 = 'Iniciado';
+
+    } else if(this.idCurso == 5) {
+      this.usuario.aula5 = status;
+    }
+
+    this.salvar(item);
   }
 
   selecionarResposta(item, selecionada) {
@@ -154,9 +176,5 @@ export class CursoComponent implements OnInit {
 
   proximaQuestao() {
     this.escolherQuestao(this.numSelecionada + 1);
-  }
-
-  finalizar() {
-
   }
 }

@@ -25,7 +25,7 @@
             </div>
             <div class="proxima-etapa">
                 <button type="button" class="btn btn-info"
-                (click)="proximaEtapa()">
+                (click)="alterarDadosCurso('proxima-etapa')">
                     Próxima etapa
                 </button>
             </div>
@@ -86,7 +86,7 @@
             </div>
         </div>
         <div class="proxima-etapa">
-            <button type="button" class="btn btn-info finalizar" (click)="finalizar()"
+            <button type="button" class="btn btn-info finalizar" (click)="alterarDadosCurso('finalizar-curso')"
             *ngIf="cursoFinalizado">
                 Finalizar curso
             </button>
