@@ -205,6 +205,298 @@
           ]
         }
       }
+    },
+    {
+      "id": 3,
+      "idCurso": 3,
+      "questoes": {
+        "questao1": {
+          "pergunta": "Qual o procedimento a ser realizado para criar uma pasta utilizando o mouse?",
+          "resposta": "Clicar com o botão direito do mouse e selecionar a opção Novo > Pasta.",
+          "questoes": [
+            {
+              "resposta": "Clicar com o botão esquerdo do mouse e selecionar a opção criar nova pasta.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "Clicar com o botão direito do mouse e selecionar a opção criar nova pasta.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "Clicar com o botão direito do mouse e selecionar a opção Novo > Pasta.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "Clicar com o botão esquerdo do mouse e selecionar a opção Novo > Pasta.",
+              "mudaCor": false
+            }
+          ]
+        },
+        "questao2": {
+          "pergunta": "Para renomear uma pasta ou arquivo, deve clicar com o botão direito do mouse e selecionar a opção “Novo nome”.",
+          "resposta": "Falso",
+          "questoes": [
+            {
+              "resposta": "Verdadeiro",
+              "mudaCor": false
+            },
+            {
+              "resposta": "Falso",
+              "mudaCor": false
+            }
+          ]
+        },
+        "questao3": {
+          "pergunta": "Qual procedimento deve ser feito para copiar uma pasta ou arquivo?",
+          "resposta": "Clicar com o botão direito no item escolhido e clicar na opção Copiar.",
+          "questoes": [
+            {
+              "resposta": "Clicar com o botão direito no item escolhido e clicar na opção Copiar.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "Arrastar o item escolhido para o lugar desejado.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "Clicar com o botão esquerdo do mouse no item escolhido e clicar na opção Recortar.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "Não precisa copiar o item, basta apenas encontrar o local em que deseja colocar a cópia.",
+              "mudaCor": false
+            }
+          ]
+        },
+        "questao4": {
+          "pergunta": "Para excluir uma pasta é necessário clicar com o botão direito no item desejado e selecionar a opção Excluir.",
+          "resposta": "Verdadeiro",
+          "questoes": [
+            {
+              "resposta": "Verdadeiro",
+              "mudaCor": false
+            },
+            {
+              "resposta": "Falso",
+              "mudaCor": false
+            }
+          ]
+        },
+        "questao5": {
+          "pergunta": "Um atalho de pasta consegue salvar os arquivos diretamente na pasta principal.",
+          "resposta": "Verdadeiro",
+          "questoes": [
+            {
+              "resposta": "Verdadeiro",
+              "mudaCor": false
+            },
+            {
+              "resposta": "Falso",
+              "mudaCor": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 4,
+      "idCurso": 4,
+      "questoes": {
+        "questao1": {
+          "pergunta": "O que acontece quando se utiliza o navegador no modo anônimo?",
+          "resposta": "Você consegue navegar sem guardar rastros no histórico.",
+          "questoes": [
+            {
+              "resposta": "Ninguém descobre quem você é na internet.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "Você consegue navegar sem guardar rastros no histórico.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "Você consegue fazer downloads escondidos.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "Não muda nada em comparação a navegação normal.",
+              "mudaCor": false
+            }
+          ]
+        },
+        "questao2": {
+          "pergunta": "Google, Bing, Duck Duck Go, para que finalidade esses sites são utilizados?",
+          "resposta": "São sites buscadores, servem para realizar buscas na internet.",
+          "questoes": [
+            {
+              "resposta": "São sites para mostrar as empresas.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "São sites perigosos que precisam ser evitados.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "São sites para fazer download.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "São sites buscadores, servem para realizar buscas na internet.",
+              "mudaCor": false
+            }
+          ]
+        },
+        "questao3": {
+          "pergunta": "Para adicionar um favorito no site, é necessário clicar na estrelinha no canto inferior esquerdo do navegador.",
+          "resposta": "Falso",
+          "questoes": [
+            {
+              "resposta": "Verdadeiro",
+              "mudaCor": false
+            },
+            {
+              "resposta": "Falso",
+              "mudaCor": false
+            }
+          ]
+        },
+        "questao4": {
+          "pergunta": "Qual a finalidade dos aplicativos Google Chrome, Firefox e Opera?",
+          "resposta": "São navegadores, utilizados para acessar os sites disponíveis na web.",
+          "questoes": [
+            {
+              "resposta": "São navegadores, utilizados para acessar os sites disponíveis na web.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "São nomes de antivírus.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "São vírus.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "São programas utilizados para verificar se o computador está atualizado.",
+              "mudaCor": false
+            }
+          ]
+        },
+        "questao5": {
+          "pergunta": "Existem diversos tipos de navegadores no mercado, o usuário utiliza aquele que mais se sente confortável.",
+          "resposta": "Verdadeiro",
+          "questoes": [
+            {
+              "resposta": "Verdadeiro",
+              "mudaCor": false
+            },
+            {
+              "resposta": "Falso",
+              "mudaCor": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 5,
+      "idCurso": 5,
+      "questoes": {
+        "questao1": {
+          "pergunta": "Quando pesquisamos uma palavra no buscador, este retorna para usuários diversas informações acerca da pesquisa realizada.",
+          "resposta": "Verdadeiro",
+          "questoes": [
+            {
+              "resposta": "Verdadeiro",
+              "mudaCor": false
+            },
+            {
+              "resposta": "Falso",
+              "mudaCor": false
+            }
+          ]
+        },
+        "questao2": {
+          "pergunta": "Os resultados das pesquisas podem variar de acordo com o que está sendo pesquisado.",
+          "resposta": "Verdadeiro",
+          "questoes": [
+            {
+              "resposta": "Verdadeiro",
+              "mudaCor": false
+            },
+            {
+              "resposta": "Falso",
+              "mudaCor": false
+            }
+          ]
+        },
+        "questao3": {
+          "pergunta": "De que forma podemos salvar uma imagem da internet para o computador?",
+          "resposta": "Clicar com o botão direito na imagem escolhida e clicar em “Salvar imagem como”.",
+          "questoes": [
+            {
+              "resposta": "Clicar com o botão esquerdo na imagem escolhida e clicar em “Baixar”.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "Clicar com o botão direito na imagem escolhida e clicar em “Download”.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "Clicar com o botão direito na imagem escolhida e clicar em “Salvar imagem como”.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "Clicar com o botão esquerdo do mouse na imagem escolhida e clicar em “Salvar imagem”.",
+              "mudaCor": false
+            }
+          ]
+        },
+        "questao4": {
+          "pergunta": "Para mover as imagens para uma pasta:",
+          "resposta": "Basta selecionar a imagem e arrastar para a pasta desejada.",
+          "questoes": [
+            {
+              "resposta": "Basta selecionar a imagem e arrastar para a pasta desejada.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "Colocar um pen drive no computador para salvar a imagem.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "Arrastar a pasta para a foto desejada.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "Nenhuma das opções.",
+              "mudaCor": false
+            }
+          ]
+        },
+        "questao5": {
+          "pergunta": "O que significa a expressão palavras-chave em uma busca?",
+          "resposta": "É uma forma para pesquisar algo de maneira efetiva, usando palavras diretas.",
+          "questoes": [
+            {
+              "resposta": "São palavras utilidades para abrirmos alguma pasta.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "São senhas para acessar um site.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "É uma forma para pesquisar algo de maneira efetiva, usando palavras diretas.",
+              "mudaCor": false
+            },
+            {
+              "resposta": "É a senha do computador.",
+              "mudaCor": false
+            }
+          ]
+        }
+      }
     }
   ],
   "usuarios": [
