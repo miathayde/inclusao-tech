@@ -32,3 +32,9 @@ export class UsuariosService {
 }
 
 // json-server --watch db.json
+
+// Modos de salvar andamento do curso:
+// iniciado (pode clicar e pendente)
+// não iniciado (não pode clicar e pendente)
+// em andamento (após clicar em dar continuidade na tela de video)
+// concluido (libera proximo curso)

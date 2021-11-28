@@ -21,10 +21,11 @@ export class CursoComponent implements OnInit {
   numSelecionada: number = 0;
   questaoSelecionada: any;
   mudarCor: boolean = false;
-  questoesRespondidas = [];
   resposta: any = null;
   respostaCorreta: boolean;
   mostrarResposta: boolean = false;
+  questoesRespondidas: Array<any> = new Array<any>();
+  cursoFinalizado: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -145,5 +146,17 @@ export class CursoComponent implements OnInit {
     } else {
       this.respostaCorreta = false;
     }
+
+    this.questoesRespondidas.push({selecionada: selecionada, numSelecionada: this.numSelecionada});
+    
+    this.questoesRespondidas.length == 5 ? this.cursoFinalizado = true : this.cursoFinalizado = false;
+  }
+
+  proximaQuestao() {
+    this.escolherQuestao(this.numSelecionada + 1);
+  }
+
+  finalizar() {
+
   }
 }

@@ -151,6 +151,7 @@
             border: none;
             color: #303030;
             line-height: 2;
+            border-radius: 12px;
         }
 
         .btn:hover {
@@ -162,6 +163,7 @@
 
     .finalizar {
         margin-top: 25px;
+        margin-bottom: 1.5rem;
         line-height: 2;
         font-size: 22px;
         min-width: 12rem;
@@ -208,7 +210,33 @@
         font-family: 'Varela Round', sans-serif;
     }
 
+    .resposta-gabarito {
+        margin-right: 1.5rem;
+    }
+
     .gabarito {
         font-size: 20px;
+    }
+}
+
+.proxima-questao {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.5rem;
+    margin-right: 1rem;
+
+    .btn {
+        background: #ffffff;
+        font-family: 'Varela Round', sans-serif;
+        border: none;
+        color: #303030;
+        line-height: 2;
+        border-radius: 12px;
+    }
+
+    .btn:hover {
+        background: #303030;
+        color: #EAEAEA;
+        transition: all 0.5s;
     }
 }

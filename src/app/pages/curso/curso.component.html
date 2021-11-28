@@ -8,7 +8,7 @@
         <div>
             <h4 *ngIf="!telaVideo">Para selecionar uma resposta, clique em cima da opção escolhida.</h4>
             <h4 *ngIf="telaVideo">Para assistir ao vídeo, é só clicar nele.</h4>
-            <h4>Se precisar pausar, também basta clicá-lo.</h4>
+            <h4 *ngIf="telaVideo">Se precisar pausar, também basta clicá-lo.</h4>
         </div>
     </div>
 
@@ -70,9 +70,15 @@
                         <p class="gabarito">Gabarito: {{ questoesCurso[numSelecionada]?.resposta }}</p>
                     </div>
                 </div>
+                <div class="proxima-questao">
+                    <button class="btn btn-primary" role="button" (click)="proximaQuestao()"
+                    *ngIf="!cursoFinalizado">
+                        Próxima questão
+                    </button>
+                </div>
             </div>
-            <div class="botao">
-                <button class="btn btn-primary" role="button" *ngIf="!mostrarResposta"
+            <div class="botao" *ngIf="!mostrarResposta">
+                <button class="btn btn-primary" role="button"
                 [disabled]="!resposta"
                 (click)="enviarResposta(questoesCurso[numSelecionada])">
                     Enviar resposta
@@ -80,7 +86,10 @@
             </div>
         </div>
         <div class="proxima-etapa">
-            <button type="button" class="btn btn-info finalizar">Finalizar curso</button>
+            <button type="button" class="btn btn-info finalizar" (click)="finalizar()"
+            *ngIf="cursoFinalizado">
+                Finalizar curso
+            </button>
         </div>
     </div>
 </div>
